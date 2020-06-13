@@ -74,10 +74,6 @@ No, not really
 
 Two pointer approach (could be used for a question that is sorted already, since in this question the input doesn't have to be sorted, this creates a problem. The problem is that we need to solve this in place, if we change the positions of the numbers our output will not always be correct.)
 
-
-
-
-
 """
 
 
