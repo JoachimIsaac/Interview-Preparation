@@ -1,0 +1,165 @@
+"""
+Problem 1 - Palindrome
+Given a linked list, determine if it is a palindrome. Your method would take in a linked list and return True / False for whether the list is a palindrome or not.
+
+Understand:
+--> Does the nodes in the linked list contain only characters.
+
+--> Can we use other data structures (extra space)
+
+--> Can we get an empty linkedlist?(yes)==> return "Not valid!!"
+
+--> If it only has one node we return true 
+
+--> is it a doubly or singlely linkedlist 
+
+--> Do we return in place? (yes)
+
+def isPalindrome(linkedlist):
+  #return True or False  
+  pass
+
+"a" return True 
+a -->b-->a ==> True 
+
+
+"a-> b -> a -> a ->b" return False
+
+
+Plan:
+1. go through linked list and put the chracters in an array. 
+
+start = 0 
+end = len(arr) - 1 
+[a,b,a]
+
+while start < end:
+  if arr[start] == arr[end]:
+    start += 1
+    end -= 1
+  else:
+    return False 
+
+return True
+
+current position is right to the left of middle
+if(current == current->next->next):
+  delete current and current->next->next from linkedlist
+  update pointers
+elif (current->next == null):
+  return true
+
+
+
+
+
+
+##########################################
+Problem 2 - Detect Cycle
+
+Given a linked list, determine if it has a cycle in it. For this problem, it may be helpful for you to write some pseudocode on how to build a linked list with a cycle. A linked list with a cycle may look something like:
+
+
+1 ---> 2 ---> 3 ---> 4
+        \           /
+          \       / 
+            \    / 
+              \/
+
+--> Can we use more space? 
+--> is it a doubly or singlely linkedlist 
+--> What do we return to say that it has a cycle?==> True or format
+
+--> Circular linked list should be considered to have a cycle
+--> If a node points back to itself, is that a cycle? (Yes)
+--> Should this be done on a single pass?
+
+def containsCycle(linkedlist):
+  #return True or False 
+  pass
+
+input: 1 ---> 2---> 3 
+                    | \ 
+                    | /
+                    |/
+output: 
+Return True
+input:
+1 ---> 2 ---> 3 ---> 4
+        \           /
+          \       / 
+            \    / 
+              \/
+output: True
+
+Plan:
+
+
+
+
+#########################################
+Problem 3 - Remove Instances
+
+Given a linked list and a value x, remove all instances of x from the linked list.
+
+-->Can we use a hashset?
+-->Can we do it in one pass?
+-->singly or doubly?
+--> Should we be returning in place?
+--> What happens if we need to remove all nodes? (Head --> None)
+
+--> 
+
+1--> 2 -->1 -->2-->3.  ==> 3->
+
+
+def removeInstance(linkedlist):
+  #return linkedList
+  pass
+
+##############################################
+Problem 4 (Challenge!) - Partition
+Given a linked list and a value x, partition it such that all nodes less than x come before nodes greater than or equal to x.
+
+If your group finishes early, try to go through the next UMPIRE steps (Match, and Plan) for the listed problems. While thinking through how you might approach a problem, you might discover that there are other clarifying questions you needed to ask!
+
+x = 10 
+
+output should meet these requirements:
+==>  nodes < x come before nodes >= x 
+
+input: 1-->2-->3-->10-->11-->12-->9 
+
+
+possible output:
+      # 1-->2--> 3-->9-->12-->10-->11
+       # 1-->2-->3-->9-->10-->11-->12
+       # 1-->2-->3-->9-->11-->10-->12
+
+Understand: 
+--> Can we do it in multiple passes?
+--> Can we use extra space?
+--> Do we need to return in place?
+--> Singly or doubly?
+--> what happens if we get an empty list ? ==> return None 
+--> preference for ordered or unordered?
+
+def Partitionlinkedlist(linkedlist):
+  return linkedlist 
+  pass
+
+"""
+def isPalindrome(arr):
+  start = 0
+  end = len(arr) - 1
+  while start < end:
+    if arr[start] == arr[end]:
+      start += 1
+      end -= 1
+    else:
+      return False
+  return True
+
+print(isPalindrome(['a','b','a']))
+print(isPalindrome(['a','b','a','a']))
+print(isPalindrome(['a','b','b','a']))
