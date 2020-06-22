@@ -163,3 +163,169 @@ def isPalindrome(arr):
 print(isPalindrome(['a','b','a']))
 print(isPalindrome(['a','b','a','a']))
 print(isPalindrome(['a','b','b','a']))
+
+"""
+For each problem, the goal for the group is to:
+
+Verbally discuss 2-3 ways to solve the problem and discuss tradeoffs with each approach
+
+Think about whether there are any 'magical' helper methods that would greatly help you solve the problem
+
+Walk through 2 example inputs and explain how the solution would produce the desired output
+
+
+Problem 1 - Remove Duplicates from Sorted List
+Given a sorted linked list, delete all duplicates such that each element appear only once.
+
+Examples:
+
+Input: 1->1->2  
+Output: 1->2  
+
+Input: 1->1->2->3->3  
+Output: 1->2->3 
+
+Input: 1->1->1->1->2->3->3  
+Output: 1->2->3 
+
+Input: 1->1->1->1->1->1->1
+Output: 1
+
+ways to appreach:
+1. Two pointers => trade offs O(N) time
+1. hash table =>  O(N) time and O(N) space 
+
+
+magical method ==> remove()
+
+https://leetcode.com/problems/remove-duplicates-from-sorted-list/
+"""
+
+
+"""
+################################################
+
+Problem 2 - Linked List Cycle
+Given a linked list, determine if it has a cycle in it. For simplicity, assume the linked list cannot have more than 1000 nodes in it.
+
+Examples:
+
+This linked list would return True
+3->2->0->4
+   ^-----'
+
+This linked list would return False
+1 -> 0
+
+1. Two pointers(Fast and slow) => trade offs 
+(N) time
+1. hash table =>  O(N) time and O(N) space 
+
+plan:
+
+dummy = head 
+
+while ptr1 != ptr2:
+  ptr1 =  head
+  ptr2 =  head.next
+
+https://leetcode.com/problems/linked-list-cycle/
+"""
+
+
+"""
+###############################################
+Problem 3 - Merge Two Sorted Lists
+Merge two sorted linked lists.
+
+Example:
+
+Input: 1->.  2->4,
+
+dummy--> 1-->1-->2-->3-->4
+
+      1. ->. 3->4 -->->> 
+Output: 1->1->2->3->4->4
+
+
+1. Two pointers(Fast and slow) => trade offs 
+(N + M) time and O(1) space 
+
+1. array =>  O(N + M) time and O(N + M) space 
+
+
+1. recursive solution : O(N + M) O(N + M)
+
+https://leetcode.com/problems/merge-two-sorted-lists/
+"""
+
+
+"""
+############################################
+Problem 4 (Challenge!) - Remove Duplicates II
+Given a linked list, delete all nodes that have duplicate numbers, leaving only distinct numbers from the original list. Can you do it without taking up extra memory?
+
+Examples:
+
+Input: 1->2->3->3->4->4->5  
+Output: 1->2->5  
+
+Input: 1->1->1->2->3  
+Output: 2->3
+
+Input: 5->3->5->3->1->5  
+Output: 1  
+
+Input: 5->6->3->5  
+Output: 6->3 or 3->6
+
+
+sort(merge sort) and pointers ==> O(n log(n)) time and space O(1)
+
+https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/
+"""
+# Problem 1 - Remove Duplicates from Sorted List
+# Given a sorted linked list, delete all duplicates such that each element appear only once.
+
+# Examples:
+
+# Input: 1->1->2  
+# Output: 1->2  
+
+# Input: 1->1->2->3->3  
+# Output: 1->2->3 
+
+# Input: 1->1->1->1->2->3->3  
+# Output: 1->2->3 
+
+# Input: 1->1->1->1->1->1->1
+# Output: 1
+
+# ways to appreach:
+# 1. Two pointers => trade offs O(N) time
+# 1. hash table =>  O(N) time and O(N) space 
+
+
+# magical method ==> remove()
+
+
+class Node:
+  def __init__(self,val):
+    self.val = val
+    self.next = None 
+
+
+
+
+class Solution:
+  def removeDuplicates(self,linkedList):
+    pass
+
+  
+
+#1->2->3->3->4->4->5
+dummy = Node(-1)
+head = dummy
+head.next = Node(1)
+head = head.next
+
