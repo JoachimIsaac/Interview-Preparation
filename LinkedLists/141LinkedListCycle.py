@@ -138,3 +138,23 @@ class Solution:
             curr = curr.next
 
         return False
+
+    class Solution:
+        def hasCycle(self, ListNode):  # Time O(n) ; space O(1)
+            if head == None:
+                return False
+
+            if head.next == None:
+                return False
+
+            slow = head
+            fast = head.next
+
+            while fast.next != None and fast.next.next != None:
+                if fast == slow:
+                    return True
+                else:
+                    fast = fast.next.next
+                    slow = slow.next
+
+            return False
