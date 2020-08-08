@@ -25,7 +25,7 @@ Understand: --> Each array that we get will be in order?(yes)
             --> Do we have to use the length the array to get the answe?(Yes, it should be done inplace)
             --> What if we get an array of zero or one ? do we just return the length still? (Yes)
 
-Match: --> pop() or remove()
+Match: --> pop() or remove() #pop() dangerous because O(n)
        --> pointers
        --> trailing pointers
        --> one pass
@@ -39,14 +39,33 @@ Plan: 1. We need to do our checks for arrays of length 0 and 1
       5. If they do no match each other we make pointer1 equal pointer 2 and we crement pointer1.
       6. we do this until we break from the while loop, and when we do we return the len(array) - counter(the mathces count).
    
-  
-   
+ [2,    3,    3,    3,    6,    9,    9]
+                               ptr1  ptr2
+   counter = 3
+    7 - 3 = 4
 
+    output = 4  
+
+[2] 
+
+[]
+
+arr = 10 
+
+O(N^2)
+ 10 * 10 
+
+10^2
+for LEN(ARR):
+    FOR LEN(ARR)
 
 Evaluate:
+complexity analysis: 
+
 
    Time: O(N)
    Space: O(1)
+
 """
 
 
